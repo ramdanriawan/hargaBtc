@@ -8,9 +8,9 @@ $(document).ready(function() {
       {
          for (var i = 1; i < $("#tableData tr").length - 1; i++) {
             for (var j = i+1; j < $("#tableData tr").length; j++) {
-               if($(`#tableData tr:eq(${i}) td:eq(1)`).text() > $(`#tableData tr:eq(${j}) td:eq(1)`).text())
+               if($(`#tableData tr:eq(${i}) td:eq(0)`).text() > $(`#tableData tr:eq(${j}) td:eq(0)`).text())
                {
-                  for (var k = 1; k < $(`#tableData tr:eq(${i}) td`).length; k++) {
+                  for (var k = 0; k < $(`#tableData tr:eq(${i}) td`).length; k++) {
                      var tablePrev = $(`#tableData tr:eq(${i}) td:eq(${k})`).text();
                      var tableNext = $(`#tableData tr:eq(${j}) td:eq(${k})`).text();
 
@@ -25,9 +25,9 @@ $(document).ready(function() {
       {
          for (var i = 1; i < $("#tableData tr").length - 1; i++) {
             for (var j = i+1; j < $("#tableData tr").length; j++) {
-               if($(`#tableData tr:eq(${i}) td:eq(1)`).text() < $(`#tableData tr:eq(${j}) td:eq(1)`).text())
+               if($(`#tableData tr:eq(${i}) td:eq(0)`).text() < $(`#tableData tr:eq(${j}) td:eq(0)`).text())
                {
-                  for (var k = 1; k < $(`#tableData tr:eq(${i}) td`).length; k++) {
+                  for (var k = 0; k < $(`#tableData tr:eq(${i}) td`).length; k++) {
                      var tablePrev = $(`#tableData tr:eq(${i}) td:eq(${k})`).text();
                      var tableNext = $(`#tableData tr:eq(${j}) td:eq(${k})`).text();
 
@@ -42,7 +42,7 @@ $(document).ready(function() {
       {
          for (var i = 1; i < $("#tableData tr").length - 1; i++) {
             for (var j = i+1; j < $("#tableData tr").length; j++) {
-               if(parseInt($(`#tableData tr:eq(${i}) td:eq(2)`).text().replace(".", "")) < parseInt($(`#tableData tr:eq(${j}) td:eq(2)`).text().replace(".", "")))
+               if(parseInt($(`#tableData tr:eq(${i}) td:eq(1)`).text().replace(".", "")) < parseInt($(`#tableData tr:eq(${j}) td:eq(1)`).text().replace(".", "")))
                {
                   for (var k = 1; k < $(`#tableData tr:eq(${i}) td`).length; k++) {
                      var tablePrev = $(`#tableData tr:eq(${i}) td:eq(${k})`).text();
@@ -60,7 +60,7 @@ $(document).ready(function() {
 
          for (var i = 1; i < $("#tableData tr").length - 1; i++) {
             for (var j = i+1; j < $("#tableData tr").length; j++) {
-               if(parseInt($(`#tableData tr:eq(${i}) td:eq(2)`).text().replace(".", "")) > parseInt($(`#tableData tr:eq(${j}) td:eq(2)`).text().replace(".", "")))
+               if(parseInt($(`#tableData tr:eq(${i}) td:eq(1)`).text().replace(".", "")) > parseInt($(`#tableData tr:eq(${j}) td:eq(1)`).text().replace(".", "")))
                {
                   for (var k = 1; k < $(`#tableData tr:eq(${i}) td`).length; k++) {
                      var tablePrev = $(`#tableData tr:eq(${i}) td:eq(${k})`).text();
@@ -78,7 +78,7 @@ $(document).ready(function() {
 
          for (var i = 1; i < $("#tableData tr").length - 1; i++) {
             for (var j = i+1; j < $("#tableData tr").length; j++) {
-               if(parseInt($(`#tableData tr:eq(${i}) td:eq(5)`).text().replace(".", "")) < parseInt($(`#tableData tr:eq(${j}) td:eq(5)`).text().replace(".", "")))
+               if(parseInt($(`#tableData tr:eq(${i}) td:eq(4)`).text().replace(".", "")) < parseInt($(`#tableData tr:eq(${j}) td:eq(4)`).text().replace(".", "")))
                {
                   for (var k = 1; k < $(`#tableData tr:eq(${i}) td`).length; k++) {
                      var tablePrev = $(`#tableData tr:eq(${i}) td:eq(${k})`).text();
@@ -96,7 +96,7 @@ $(document).ready(function() {
 
          for (var i = 1; i < $("#tableData tr").length - 1; i++) {
             for (var j = i+1; j < $("#tableData tr").length; j++) {
-               if(parseInt($(`#tableData tr:eq(${i}) td:eq(6)`).text().replace(".", "")) > parseInt($(`#tableData tr:eq(${j}) td:eq(6)`).text().replace(".", "")))
+               if(parseInt($(`#tableData tr:eq(${i}) td:eq(5)`).text().replace(".", "")) > parseInt($(`#tableData tr:eq(${j}) td:eq(5)`).text().replace(".", "")))
                {
                   for (var k = 1; k < $(`#tableData tr:eq(${i}) td`).length; k++) {
                      var tablePrev = $(`#tableData tr:eq(${i}) td:eq(${k})`).text();

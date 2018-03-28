@@ -6,6 +6,10 @@ header, footer {
    padding: 20px 10px;
 }
 
+body{
+background-color: lightslategray;
+}
+
 main{
    margin: 40px auto;
 }
@@ -49,7 +53,7 @@ background-color: #131414;
 padding: 10px;
 margin: 0 10px;
 color: white;
-font-size: 30px;
+font-size: 20px;
 
 }
 
@@ -65,4 +69,20 @@ color: white;
 .copy{
 color: white;
 margin: auto;
+text-align: right;
+}
+
+table tbody tr:not(:last-child) th, table thead th:first-child{
+   text-align: center;
+}
+
+table, select{
+text-transform: capitalize;
+}
+
+@media only screen and (max-width: 425px) {
+   .copy{
+      text-align: center;
+   }
+
 }
