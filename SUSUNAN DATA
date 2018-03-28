@@ -1,0 +1,52 @@
+data{
+   exchanger:{
+      indodax: {
+         name: "indodax",
+         website: "https://indodax.com",
+         rate: {
+            usd: 9386.20,
+            idr: 135000000
+         } ,
+         volume: 2500,
+         high: 300,
+         low: 400,
+         change: "-5%"
+      },
+      coinbase: {
+         name: "indodax",
+         website: "https://indodax.com",
+         rate: {
+            usd: 9386.20,
+            idr: 135000000
+         } ,
+         volume: 2500,
+         high: 300,
+         low: 400,
+         change: "-5%"
+      },
+      yobit: {
+         name: "indodax",
+         website: "https://indodax.com",
+         rate: {
+            usd: 9386.20,
+            idr: 135000000
+         } ,
+         volume: 2500,
+         high: 300,
+         low: 400,
+         change: "-5%"
+      },
+      bittrex: {
+         name: "indodax",
+         website: "https://indodax.com",
+         rate: {
+            usd: 9386.20,
+            idr: 135000000
+         } ,
+         volume: 2500,
+         high: 300,
+         low: 400,
+         change: "-5%"
+      }
+   }
+}

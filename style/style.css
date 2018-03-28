@@ -1,0 +1,68 @@
+.container-fluid{
+   background-color: #191D1D;
+}
+
+header, footer {
+   padding: 20px 10px;
+}
+
+main{
+   margin: 40px auto;
+}
+.logo{
+   color: #A9BDC7;
+}
+
+.rateDollar {
+    color: #333;
+    border-radius: 25%;
+    background-color: rgb(105, 117, 122);
+    font-weight: bold;
+    margin: auto;
+    width: 300px;
+    text-align: center;
+    padding: 5px;
+    margin-top: 7px;
+    }
+
+#card{
+background-color: #19191A;
+}
+
+.warna-header{
+   background-color: #071117;
+}
+
+.warna-gray{
+   color: black;
+}
+
+ul.sosialMedia li{
+   padding:0;
+   margin:0;
+   display: inline-block;
+
+}
+
+a[class *= 'fa-']{
+background-color: #131414;
+padding: 10px;
+margin: 0 10px;
+color: white;
+font-size: 30px;
+
+}
+
+.fa{
+text-decoration: none;
+}
+
+a[class *= 'fa-']:hover{
+opacity: 0.5;
+color: white;
+}
+
+.copy{
+color: white;
+margin: auto;
+}
