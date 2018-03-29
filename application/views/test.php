@@ -31,23 +31,15 @@ require_once "phpQuery/phpQuery.php";
    // $hargaBtcCoinbase = json_decode($html);
    // echo $hargaBtcCoinbase->data[0]->amount;
 
-//harga btc yobit
-// $url = "https://yobit.net/en/trade/BTC/USD";
-// $html = file_get_contents($url);
-// $dom = phpQuery::newDocument($html);
-//
-// $listHargaBtcYobit = pq("div#data-pjax-container ul.top_center_list li.c_2");
-// $hargaBtcYobit = $listHargaBtcYobit->find("span#label_last")->text();
-// echo "<pre>";
-// echo $hargaBtcYobit;
 
 //bittrex
-// $url = "https://bittrex.com/api/v1.1/public/getmarketsummary?market=usdt-btc";
-// $html = file_get_contents($url);
-//
-// $hargaBtcBittrex = json_decode($html);
-//
-// echo $hargaBtcBittrex->result[0]->Last;
+$url = "https://bittrex.com/api/v1.1/public/getmarketsummary?market=usdt-btc";
+$html = file_get_contents($url);
+
+$hargaBtcBittrex = json_decode($html);
+
+echo "<pre>";
+print_r($hargaBtcBittrex);
 
 //cex.io
 // $url = "https://api.livecoin.net/exchange/ticker?currencyPair=BTC/USD";
@@ -99,11 +91,11 @@ require_once "phpQuery/phpQuery.php";
 // echo array_reverse($hargaBtcCoindesk->BTC->graph_data->d)[0];
 
 //okcoin
-$url = "https://www.okcoin.com/api/v1/ticker.do?symbol=btc_usd";
-$html = file_get_contents($url);
-
-$hargaBtcOkcoin = json_decode($html);
-echo $hargaBtcOkcoin->ticker->last;
+// $url = "https://www.okcoin.com/api/v1/ticker.do?symbol=btc_usd";
+// $html = file_get_contents($url);
+//
+// $hargaBtcOkcoin = json_decode($html);
+// echo $hargaBtcOkcoin->ticker->last;
 
 
  ?>

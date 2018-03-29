@@ -23,13 +23,17 @@
      <header class="cointainer-fluid warna-header">
         <div class="container">
            <div class="row">
-             <div class="col-6">
+             <div class="col-12 col-sm-5">
                 <h4 class="logo">HargaBtc</h4>
              </div>
-             <div class="col-6">
+             <div class="col-12 col-sm-2">
+                <p class="text-center logo" id="time"><!--waktu akan tampil disini--></p>
+
+             </div>
+             <div class="col-12 col-sm-5">
                 <h4>
                    <p class="text-right logo">
-                      1 USD = 13000 IDR
+                      1 USD = <span id="rateUsd">-</span> IDR
                    </p>
                 </h4>
              </div>
@@ -88,48 +92,19 @@
                         <th scope="col">exchanger</th>
                         <th scope="col">usd</th>
                         <th scope="col">idr</th>
-                        <th scope="col">volume</th>
-                        <th scope="col">high</th>
-                        <th scope="col">low</th>
+                        <th scope="col">volume (BTC)</th>
+                        <th scope="col">high (USD)</th>
+                        <th scope="col">low (USD)</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr class="thead-dark">
-                        <th>1.</th>
-                        <td>indodax</td>
-                        <td>1000</td>
-                        <td>1000000</td>
-                        <td>1000000</td>
-                        <td>1000009</td>
-                        <td>1000008</td>
-                      </tr>
-                      <tr class="thead-dark">
-                        <th>2.</th>
-                        <td>yobit</td>
-                        <td>2000</td>
-                        <td>3000000</td>
-                        <td>3000000</td>
-                        <td>4000009</td>
-                        <td>5000008</td>
-                      </tr>
-                      <tr class="thead-dark">
-                        <th>3.</th>
-                        <td>coibase</td>
-                        <td>3000</td>
-                        <td>4000000</td>
-                        <td>4000000</td>
-                        <td>5000009</td>
-                        <td>6000008</td>
-                      </tr>
-                      <tr class="bg-secondary">
-                         <th colspan="2" class="text-center">average</th>
-                         <th>3000    </th>
-                         <th>30000000</th>
-                         <th>4000000 </th>
-                         <th>5000009 </th>
-                         <th>6000008 </th>
-                      </tr>
-                    </tbody>
+                      <tr id="dataCoinbase" class="thead-dark"></tr>
+                     </tbody>
+                     <tfoot>
+                        <tr id="average" class="bg-secondary">
+                           <th colspan="2" class="text-center">average</th>
+                        </tr>
+                     </tfoot>
                   </table>
                 </div>
              </div>
@@ -155,10 +130,11 @@
         </div>
      </footer>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
+   <script src="<?php echo base_url() . "script/accounting.js" ?>" charset="utf-8"></script>
    <script src="<?php echo base_url() . "script/script.js" ?>" charset="utf-8"></script>
+
   </body>
 </html>

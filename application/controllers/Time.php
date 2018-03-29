@@ -1,18 +1,14 @@
-<?php
-
-/**
+<?php /**
  *
  */
-class Index extends CI_Controller
+class Time extends CI_Controller
 {
 
-   function home()
+   function getTimeIndonesia()
    {
       $timezone_identifier = "Asia/Jakarta";
       date_default_timezone_set($timezone_identifier);
-      $this->load->view("home");
+      echo date("d M H:i:s", time()) . " WIB";
    }
 }
-
-
  ?>

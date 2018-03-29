@@ -72,7 +72,7 @@ margin: auto;
 text-align: right;
 }
 
-table tbody tr:not(:last-child) th, table thead th:first-child{
+table tbody tr th, table thead th:first-child{
    text-align: center;
 }
 
@@ -84,5 +84,7 @@ text-transform: capitalize;
    .copy{
       text-align: center;
    }
+
+
 
 }

@@ -1,7 +1,9 @@
-<?php
-
-class convert
+<?php /**
+ *
+ */
+class ConvertFromJs extends CI_Controller
 {
+
    protected $ci;
 
    function __construct(){
@@ -10,7 +12,7 @@ class convert
 
    function getRateUsd()
    {
-      $this->ci->load->view("phpQueryLoad");
+      $this->ci->load->view("phpQuery/phpQuery");
 
       $urlRateUsd = "http://www.xe.com/currencyconverter/convert/?Amount=1&From=USD&To=IDR";
       $rateUsd = file_get_contents($urlRateUsd);
@@ -23,27 +25,25 @@ class convert
 
       $rateUsd = strtr($rateUsd, $tandaGanti);
 
-      return $rateUsd;
+      echo $rateUsd;
    }
 
-   function formatToCurrency($number)
+   function formatToCurrency()
    {
-      return number_format($number, 2, ",", ".");
+      echo number_format($this->uri->segment(2), 2, ",", ".");
    }
 
-   function convertToUsd($idr)
+   function convertToUsd()
    {
 
-      $rateUsd = $idr / $this->getRateUsd();
+      $rateUsd = $this->uri->segment(2) / $this->getRateUsd();
 
-      return $this->formatToCurrency($rateUsd);
+      echo $this->formatToCurrency($rateUsd);
    }
 
-   function convertToIdr($usd)
+   function convertToIdr()
    {
-      return $this->formatToCurrency($usd * $this->getRateUsd());
+      echo $this->formatToCurrency($this->uri->segment(2) * $this->getRateUsd());
    }
 }
-
-
  ?>
