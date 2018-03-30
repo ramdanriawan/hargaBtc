@@ -96,6 +96,6 @@ require_once "phpQuery/phpQuery.php";
 //
 // $hargaBtcOkcoin = json_decode($html);
 // echo $hargaBtcOkcoin->ticker->last;
-
+echo base_url();
 
  ?>

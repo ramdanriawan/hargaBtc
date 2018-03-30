@@ -15,7 +15,7 @@ $data["data"]["exchanger"] = array();
 // $dataCoinbase["high"]        = $this->convert->formatToCurrency($json->high);
 // $dataCoinbase["low"]         = $this->convert->formatToCurrency($json->low);
 
-array_push($data["data"]["exchanger"], $dataCoinbase);
+//array_push($data["data"]["exchanger"], $dataCoinbase);
 
 // dapatkan data dari indodax
  $url  = "https://vip.bitcoin.co.id/api/btc_idr/ticker";
