@@ -33,13 +33,13 @@ require_once "phpQuery/phpQuery.php";
 
 
 //bittrex
-$url = "https://bittrex.com/api/v1.1/public/getmarketsummary?market=usdt-btc";
-$html = file_get_contents($url);
-
-$hargaBtcBittrex = json_decode($html);
-
-echo "<pre>";
-print_r($hargaBtcBittrex);
+// $url = "https://bittrex.com/api/v1.1/public/getmarketsummary?market=usdt-btc";
+// $html = file_get_contents($url);
+//
+// $hargaBtcBittrex = json_decode($html);
+//
+// echo "<pre>";
+// print_r($hargaBtcBittrex);
 
 //cex.io
 // $url = "https://api.livecoin.net/exchange/ticker?currencyPair=BTC/USD";

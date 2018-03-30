@@ -26,7 +26,7 @@ $(document).ready(function() {
       })
    }
    hargaCoinbase();
-   setInterval(hargaCoinbase, 3000);
+   setInterval(hargaCoinbase, 10000);
 
    //untuk mendapatkan rate usd sekarang
    function getRateUsd()
@@ -41,7 +41,7 @@ $(document).ready(function() {
       })
    }
    getRateUsd();
-   setInterval(getRateUsd, 3000);
+   setInterval(getRateUsd, 10000);
 
    //untuk menconversi ke idr
    function convertToIdr(usd)
@@ -80,16 +80,17 @@ $(document).ready(function() {
    }
 
    getDataCoinbase();
-   setInterval(getDataCoinbase, 3000);
+   setInterval(getDataCoinbase, 10000);
 
    function getDataTicker()
    {
       $.ajax({
-         url: "Server",
+         url: "Server/dataExchanger",
          success: function(data)
          {
             var data = $.parseJSON(data);
             $("#tableData tbody").empty();
+            $("#tableData tfoot").empty();
 
             $.each(data.data.exchanger, function(index, val) {
                val.no       = `<th>${index+1}.</td>`;
@@ -103,12 +104,25 @@ $(document).ready(function() {
 
                $("#tableData tbody").append(dataHtml);
             });
+
+
+            average = `<th colspan='2' class="text-center">Average</th>`;
+            data.data.average.usd = `<th>${data.data.average.usd}</th>`;
+            data.data.average.idr = `<th>${data.data.average.idr}</th>`;
+            data.data.average.volume = `<th>${data.data.average.volume}</th>`;
+            data.data.average.high = `<th>${data.data.average.high}</th>`;
+            data.data.average.low = `<th>${data.data.average.low}</th>`;
+
+            var dataHtmlAverage = `${average + data.data.average.usd + data.data.average.idr + data.data.average.volume + data.data.average.high + data.data.average.low}`;
+            $("#tableData tfoot").append(dataHtmlAverage);
+
+
          }
       })
    }
 
    getDataTicker();
-   setInterval(getDataTicker, 3000);
+   setInterval(getDataTicker, 10000);
 
    //digunakan untuk mensortir data
    $("#sortirData").change(function(){

@@ -46,7 +46,7 @@
            <div class="card">
              <div class="card-header  warna-header">
                 <div class="row">
-                   <div class="col-4">
+                   <div class="col-3">
                       <select class="form-control" name="coin">
                          <option value="btc">btc</option>
                          <option value="eth">bch</option>
@@ -65,7 +65,7 @@
                    </div>
 
                    <!--  urutkan data berdasakan -->
-                   <div class="col-4">
+                   <div class="col-3">
                       <select id="sortirData" class="form-control" name="sortir">
                          <option value="asc">asc</option>
                          <option value="desc">desc</option>
@@ -77,8 +77,15 @@
                    </div>
 
                    <!--  digunakan untuk memfilter table data berdasarkan input-->
-                   <div class="col-4">
+                   <div class="col-3">
                      <input id="filterTable" class="form-control filter" placeholder="Filter table data...">
+                  </div>
+
+                  <div class="col-3">
+                     <button type='button' class='btn btn-md btn-danger'>
+                        <span class="glyphicon glyphicon-refresh"></span>
+                     </button>
+
                   </div>
 
                 </div>
@@ -102,7 +109,7 @@
                      </tbody>
                      <tfoot>
                         <tr id="average" class="bg-secondary">
-                           <th colspan="2" class="text-center">average</th>
+
                         </tr>
                      </tfoot>
                   </table>

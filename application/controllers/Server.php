@@ -10,6 +10,11 @@ class Server extends CI_Controller
    {
       $this->load->view("server");
    }
+
+   function dataExchanger()
+   {
+      $this->load->view("dataExchanger");
+   }
 }
 
 
